@@ -14,6 +14,9 @@ Replicate the high-level layout blocks of LinkedIn, Gmail, and Discord. Use the 
 ### Discord
 ![Discord](images/discord.png)
 
+### Examples
+Check out the example screenshots in the [examples directory](examples) of the type of output / level of detail we are looking for. Keep it simple as per the images that end with `-simple.png`; but if you want to have a bit of fun, then you can add a LITTLE more detail but not too much, as per the images that end with `-more.png`.
+
 ## Tips
 - Focus on the bigger blocks that make up the site, don't get mixed up with the smaller details like cards and widgets
 - User background colours to easily tell the blocks apart
