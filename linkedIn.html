@@ -1,51 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head> 
+  <head>
     <title>LinkedIn</title>
     <style>
+      .container {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+        grid-template-rows: 50px 100px 1fr;
+        gap: 10px;
+      }
+      .header {
+        background-color: lightblue;
+        grid-column: 1 / 6;
+        grid-row: 1 / span 1;
+        text-align: center;
+      }
+      .top-main {
+        background-color: darkblue;
+        grid-column: 3 / 4;
+        grid-row: 2 / span 1;
+        color: white;
+        text-align: center;
+      }
+      .centre-main {
+        background-color: lightblue;
+        grid-column: 3 / 4;
+        grid-row: 3 / span 3;
+        color: white;
+        text-align: center;
+      }
+      .aside-left {
+        background-color: green;
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 4;
+        color: white;
+        text-align: center;
+      }
+      .aside-right {
+        background-color: green;
+        grid-column: 4 / span 1;
+        grid-row: 2 / span 4;
+        color: white;
+        text-align: center;
+      }
+      div.background {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 4;
+      }
+      aside.background-right {
+        grid-column: 5 / span 1;
+        grid-row: 2 / span 4
+      }
+
+      @media (max-width: 700px) {
         .container {
-            height: 100vh;
-            display: grid;
-            grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
-            grid-template-rows: 50px 100px 1fr;
-            gap: 10px
+          grid-template-columns: 1fr 2fr 1fr;
         }
         .header {
-            background-color: lightblue;
-            grid-column: 1 / 6;
-            grid-row: 1 / span 1;
-            text-align: center;
-        }
-        .top-main {
-            background-color: darkblue;
-            grid-column: 3 / 4;
-            grid-row: 2 / span 1;
-            color: white;
-            text-align: center;
-        }
-        .centre-main {
-            background-color: lightblue;
-            grid-column: 3 / 4;
-            grid-row: 3 / span 3;
-            color: white;
-            text-align: center;
+          grid-column: 1 / 4;
         }
         .aside-left {
-            background-color: green;
-            grid-column: 2 / span 1;
-            grid-row: 2 / span 4;
-            color: white;
-            text-align: center;
+          grid-column: 1 / span 1;
         }
         .aside-right {
-            background-color: green;
-            grid-column: 4 / span 1;
-            grid-row: 2 / span 4;
-            color: white;
-            text-align: center;
+          grid-column: 3 / span 1;
         }
+        .top-main {
+          grid-column: 2 / span 1;
+        }
+        .centre-main {
+          grid-column: 2 / span 1;
+        }
+        .background-left {
+            display: none;
+        }
+        .background-right {
+            display: none;
+        }
+      }
     </style>
-
   </head>
   <body>
     <div class="container">
@@ -54,6 +88,9 @@
       <div class="centre-main">Centre Main</div>
       <div class="aside-left">Aside Left</div>
       <div class="aside-right">Aside Right</div>
+      <div class="background-left">Background Left</div>
+      <div class="background-right">Background Right</div>
+      </div>
     </div>
   </body>
 </html>

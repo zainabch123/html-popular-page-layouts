@@ -6,7 +6,7 @@
       .container {
         height: 100vh;
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr 70px;
         grid-template-rows: 100px 1fr;
       }
       .header {
@@ -44,6 +44,47 @@
         color: white;
         text-align: center;
       }
+
+      @media (max-width: 900px) {
+        .container {
+          grid-template-columns: 1fr 2fr 1fr;
+        }
+        .header {
+            grid-column: 1 / 4 ;
+        }
+        .aside-left {
+            grid-column: 1 / span 1;
+        }
+        .main {
+            grid-column: 2 / span 1;
+        }
+        .aside-right {
+            display: 3 / span 1;
+        }
+        .aside-far-right {
+            display: none;
+        }
+    }
+      @media (max-width: 700px) {
+        .container {
+          grid-template-columns: 1fr 2fr;
+        }
+        .header {
+            grid-column: 1 / 3 ;
+        }
+        .aside-left {
+            grid-column: 1 / span 1;
+        }
+        .main {
+            grid-column: 2 / span 1;
+        }
+        .aside-right {
+            display: none;
+        }
+        .aside-far-right {
+            display: none;
+        }
+    }
     </style>
   </head>
   <body>
