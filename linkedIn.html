@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <title>LinkedIn</title>
+    <style>
+        .container {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+            grid-template-rows: 50px 100px 1fr;
+            gap: 10px
+        }
+        .header {
+            background-color: lightblue;
+            grid-column: 1 / 6;
+            grid-row: 1 / span 1;
+            text-align: center;
+        }
+        .top-main {
+            background-color: darkblue;
+            grid-column: 3 / 4;
+            grid-row: 2 / span 1;
+            color: white;
+            text-align: center;
+        }
+        .centre-main {
+            background-color: lightblue;
+            grid-column: 3 / 4;
+            grid-row: 3 / span 3;
+            color: white;
+            text-align: center;
+        }
+        .aside-left {
+            background-color: green;
+            grid-column: 2 / span 1;
+            grid-row: 2 / span 4;
+            color: white;
+            text-align: center;
+        }
+        .aside-right {
+            background-color: green;
+            grid-column: 4 / span 1;
+            grid-row: 2 / span 4;
+            color: white;
+            text-align: center;
+        }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">LinkedIn Header</div>
+      <div class="top-main">Top Main</div>
+      <div class="centre-main">Centre Main</div>
+      <div class="aside-left">Aside Left</div>
+      <div class="aside-right">Aside Right</div>
+    </div>
+  </body>
+</html>
